@@ -4,6 +4,7 @@ package chess;
  * Describes a position on the Chess Board
  */
 public class Position {
+
     public static final int MIN_ROW = 1;
     public static final int MAX_ROW = 8;
     public static final char MIN_COLUMN = 'a';
@@ -20,6 +21,10 @@ public class Position {
     public Position(char column, int row) {
         this.row = row;
         this.column = column;
+    }
+
+    public String getId() {
+        return toString();
     }
 
     /**

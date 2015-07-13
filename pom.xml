@@ -30,6 +30,18 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.goldmansachs</groupId>
+            <artifactId>gs-collections-api</artifactId>
+            <version>6.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.goldmansachs</groupId>
+            <artifactId>gs-collections</artifactId>
+            <version>6.2.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

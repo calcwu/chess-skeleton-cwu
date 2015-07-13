@@ -1,12 +1,16 @@
 package chess;
 
+import java.util.Map;
+
 import chess.pieces.Piece;
 import chess.pieces.Queen;
 import chess.pieces.Rook;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNull;
+import static junit.framework.Assert.assertTrue;
 
 /**
  * Basic unit tests for the GameState class
@@ -48,5 +52,16 @@ public class GameStateTest {
         Piece blackQueen = state.getPieceAt("d8");
         assertTrue("A queen should be at d8", blackQueen instanceof Queen);
         assertEquals("The queen at d8 should be owned by Black", Player.Black, blackQueen.getOwner());
+    }
+
+    @Test
+    public void testAllPositions() {
+        //start
+        state.reset();
+
+        Map<Position, Piece> map1 = state.getAllPositions(Player.White);
+        Map<Position, Piece> map2 = state.getCurrentPlayerPositions();
+        assertEquals(map1.size(), map2.size());
+        assertEquals(2 * Position.MAX_ROW, map1.size());
     }
 }
