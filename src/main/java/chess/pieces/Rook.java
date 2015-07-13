@@ -26,7 +26,7 @@ public class Rook extends Piece {
     protected Set<Position> doFindPositions(Position position, GameState gameState) {
         GameStateMoveValidator gsm = new GameStateMoveValidator(gameState);
         return Sets.mutable
-                .withAll(gsm.findVerticalMoves(getOwner(), position))
-                .withAll(gsm.findHorizontalMoves(getOwner(), position));
+                .withAll(gsm.findHorizentalMoves(getOwner(), position))
+                .withAll(gsm.findVerticalMoves(getOwner(), position));
     }
 }

@@ -28,7 +28,7 @@ public class GameStateMoveValidator {
      * @param position
      * @return
      */
-    public Set<Position> findHorizontalMoves(Player player, Position position) {
+    public Set<Position> findVerticalMoves(Player player, Position position) {
         return findXYMoves(player, position, Axis.y);
     }
 
@@ -38,7 +38,7 @@ public class GameStateMoveValidator {
      * @param position
      * @return
      */
-    public Set<Position> findVerticalMoves(Player player, Position position) {
+    public Set<Position> findHorizentalMoves(Player player, Position position) {
         return findXYMoves(player, position, Axis.x);
     }
 
